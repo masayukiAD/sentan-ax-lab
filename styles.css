@@ -83,12 +83,17 @@ h1, h2, h3, h4 { margin: 0; }
 }
 
 .lime-under {
-  background-image: linear-gradient(transparent 62%, var(--lime) 62%, var(--lime) 92%, transparent 92%);
+  background-image: linear-gradient(
+    transparent 82%,
+    rgba(232, 255, 58, 0.85) 82%,
+    rgba(232, 255, 58, 0.85) 96%,
+    transparent 96%
+  );
   background-repeat: no-repeat;
   background-size: 100% 100%;
   color: var(--text);
-  padding: 0 0.1em;
-  font-weight: 500;
+  padding: 0 0.08em;
+  font-weight: 600;
 }
 
 /* Section heading shared */
