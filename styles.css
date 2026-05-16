@@ -83,12 +83,7 @@ h1, h2, h3, h4 { margin: 0; }
 }
 
 .lime-under {
-  background-image: linear-gradient(rgba(232, 255, 58, 0.9), rgba(232, 255, 58, 0.9));
-  background-repeat: no-repeat;
-  background-position: 0 100%;
-  background-size: 100% 0.22em;
-  color: var(--text);
-  padding: 0 0.06em 0.04em;
+  color: var(--lime);
   font-weight: 700;
 }
 
