@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/* ============================================================
+   和文タイポグラフィ — 基本組版CSS
+   和欧混植・約物処理・禁則・行間など、日本語Webの土台。
+   ブランド色・各値・レイアウトは styles.css 側で指定する。
+   ============================================================ */
+
+:root {
+  /* 欧文フェイスを和文より前に積む（数字・英字のベースラインを和文に合わせる） */
+  --latin-face: "Helvetica Neue", Arial;
+  --jp-gothic: "Hiragino Kaku Gothic ProN", "Yu Gothic", YuGothic, "Noto Sans JP", sans-serif;
+}
+
+/* 和欧混植：欧文フェイス → 和文 の順で組む */
+html {
+  font-family: var(--latin-face), var(--jp-gothic);
+  line-break: strict;                 /* 行頭禁則（句読点・閉じ括弧を行頭に出さない） */
+}
+
+body {
+  line-height: var(--lh-body, 1.8);   /* 和文の行間は単位なしで指定 */
+  font-size: var(--fs-body, 16px);
+  font-feature-settings: "pkna" 1;    /* 本文：仮名の約物を詰める */
+}
+
+/* 見出し・数字は約物を詰める（プロポーショナルメトリクス） */
+h1, h2, h3, h4, .lead, .num, .stat { font-feature-settings: "palt" 1; }
+
+/* 見出しの和文は単語扱いにして、意図しない位置で折り返さない */
+h1, h2, h3, .hero__title {
+  word-break: keep-all;
+  overflow-wrap: normal;
+  line-height: var(--lh-head, 1.35);
+}
+
+/* ユーティリティ */
+.yakumono-han { font-feature-settings: "palt" 1; letter-spacing: 0; }
+.break-anywhere { overflow-wrap: anywhere; }
+.nowrap { white-space: nowrap; }
+.num, .stat { font-family: var(--latin-face), var(--jp-gothic); } /* 数字を欧文フェイスで */
+.measure { max-width: var(--measure, 62ch); }                     /* 本文の最大行長 */
+
+@media (max-width: 600px) {
+  h1, h2, h3, .hero__title { word-break: keep-all; overflow-wrap: normal; }
+  .hero { min-height: 100svh; }       /* モバイルは svh（アドレスバーのズレ対策） */
+}

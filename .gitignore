@@ -45,3 +45,9 @@ Thumbs.db
 docs/06-images/
 *-candidates/
 _image-drafts/
+
+# --- ローカルバックアップ ---
+_archive/
+
+# --- 内部設計メモ（公開しない） ---
+brand-kit.json
