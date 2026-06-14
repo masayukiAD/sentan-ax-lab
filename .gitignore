@@ -51,3 +51,7 @@ _archive/
 
 # --- 内部設計メモ（公開しない） ---
 brand-kit.json
+
+# --- note記事用バナー（サイト未参照の中間生成物） ---
+assets/note-banners/
+generated-assets/
