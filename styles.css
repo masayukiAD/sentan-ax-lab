@@ -243,6 +243,7 @@ img { display: block; max-width: 100%; }
 .foot__tag { color: var(--text-sub); font-size: 14px; margin-top: 12px; line-height: 1.8; max-width: 36ch; font-family: var(--jp-gothic); }
 .foot__meta { display: grid; gap: 8px; font-size: 13px; color: var(--text-sub); font-family: var(--jp-gothic); }
 .foot__meta b { color: var(--text); font-weight: 700; }
+.foot__meta a { color: var(--lime); border-bottom: 1px solid var(--lime-soft); padding-bottom: 1px; }
 /* ステータスバー */
 .statusbar {
   display: flex; flex-wrap: wrap; align-items: center; gap: 0;
